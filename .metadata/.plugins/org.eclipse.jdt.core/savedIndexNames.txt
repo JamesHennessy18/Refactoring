@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+/Users/jameshennessy67/Desktop/Refactoring/.metadata/.plugins/org.eclipse.jdt.core
+178216722.index
