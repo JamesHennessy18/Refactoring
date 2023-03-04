@@ -344,16 +344,16 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 	}// end displaySummaryDialog
 
 	// display search by ID dialog
-	private void displaySearchByIdDialog() {
+	/*private void displaySearchByIdDialog() {
 		if (isSomeoneToDisplay())
 			new SearchByIdDialog(EmployeeDetails.this);
-	}// end displaySearchByIdDialog
+	}// end displaySearchByIdDialog*/
 
 	// display search by surname dialog
-	private void displaySearchBySurnameDialog() {
+	/*private void displaySearchBySurnameDialog() {
 		if (isSomeoneToDisplay())
 			new SearchBySurnameDialog(EmployeeDetails.this);
-	}// end displaySearchBySurnameDialog
+	}// end displaySearchBySurnameDialog*/
 
 	// find byte start in file for first active record
 	private void firstRecord() {
@@ -996,11 +996,11 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 				saveFileAs();
 			change = false;
 		} else if (e.getSource() == searchById) {
-			if (checkInput() && !checkForChanges())
-				displaySearchByIdDialog();
+			//if (checkInput() && !checkForChanges())
+				//displaySearchByIdDialog();
 		} else if (e.getSource() == searchBySurname) {
-			if (checkInput() && !checkForChanges())
-				displaySearchBySurnameDialog();
+			//i//f (checkInput() && !checkForChanges())
+				//();
 		} else if (e.getSource() == searchId || e.getSource() == searchByIdField)
 			searchEmployeeById();
 		else if (e.getSource() == searchSurname || e.getSource() == searchBySurnameField)
@@ -1044,8 +1044,8 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 			if (checkInput() && !checkForChanges())
 				deleteRecord();
 		} else if (e.getSource() == searchBySurname) {
-			if (checkInput() && !checkForChanges())
-				new SearchBySurnameDialog(EmployeeDetails.this);
+			//if (checkInput() && !checkForChanges() 
+			//	new SearchBySurnameDialog(EmployeeDetails.this);
 		}
 	}// end actionPerformed
 
