@@ -29,23 +29,6 @@ public class AddRecordDialog extends JDialog implements ActionListener {
 	JButton save, cancel;
 	EmployeeDetails parent;
 	// constructor for add record dialog
-	public AddRecordDialog(EmployeeDetails parent) {
-		setTitle("Add Record");
-		setModal(true);
-		this.parent = parent;
-		this.parent.setEnabled(false);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
-		JScrollPane scrollPane = new JScrollPane(dialogPane());
-		setContentPane(scrollPane);
-		
-		getRootPane().setDefaultButton(save);
-		
-		setSize(500, 370);
-		setLocation(350, 250);
-		setVisible(true);
-	}// end AddRecordDialog
-	
 	private AddRecordDialog(Builder builder) {
         setTitle(builder.title);
         setModal(true);
@@ -58,7 +41,7 @@ public class AddRecordDialog extends JDialog implements ActionListener {
         
         getRootPane().setDefaultButton(save);
         
-        setSize(builder.w, builder.h);
+        setSize(builder.width, builder.height);
         setLocation(builder.x, builder.y);
         setVisible(true);
     }
@@ -67,11 +50,11 @@ public class AddRecordDialog extends JDialog implements ActionListener {
 
         private String title = "Add Record";
         private EmployeeDetails parent;
-        private int w = 500;
-        private int h = 370;
+        private int width = 500;
+        private int height = 370;
         private int x = 350;
         private int y = 250;
-     
+        private Font font1;
 
         public Builder(EmployeeDetails parent) {
             this.parent = parent;
@@ -82,13 +65,13 @@ public class AddRecordDialog extends JDialog implements ActionListener {
             return this;
         }
 
-        public Builder setW(int w) {
-            this.w = w;
+        public Builder setWidth(int width) {
+            this.width = width;
             return this;
         }
 
-        public Builder setH(int h) {
-            this.h = h;
+        public Builder setHeight(int height) {
+            this.height = height;
             return this;
         }
 
@@ -102,11 +85,15 @@ public class AddRecordDialog extends JDialog implements ActionListener {
             return this;
         }
 
+        public Builder setFont(Font font1) {
+            this.font1 = font1;
+            return this;
+        }
+
         public AddRecordDialog build() {
             return new AddRecordDialog(this);
         }
     }
-
 	// initialize dialog container
 	public Container dialogPane() {
 		JPanel empDetails, buttonPanel;

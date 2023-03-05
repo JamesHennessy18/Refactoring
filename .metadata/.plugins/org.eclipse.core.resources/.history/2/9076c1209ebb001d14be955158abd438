@@ -517,11 +517,10 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 	// get next free ID from Employees in the file
 	public int getNextFreeId() {
 	    if (!isSomeoneToDisplay()) {
-	        return 1; //if no employee to display returns employee id 1
+	        return 1;
 	    }
 
 	    lastRecord();
-//gets nextId by adding 1 to latest employee record
 	    int nextFreeId = currentEmployee.getEmployeeId() + 1;
 
 	    return nextFreeId;

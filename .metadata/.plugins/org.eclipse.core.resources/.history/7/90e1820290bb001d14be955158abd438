@@ -15,62 +15,15 @@ public class RandomFile {
 	private RandomAccessFile output;
 	private RandomAccessFile input;
 	private static RandomFile ins;
-	//Adding the Builder Pattern to this class
-	 public static class EmployeeBuilder {
-	        private int employeeId;
-	        private String pps;
-	        private String surname;
-	        private String firstName;
-	        private char gender;
-	        private String department;
-	        private double salary;
-	        private boolean fullTime;
+	
+	 public RandomFile() {}
 
-	        public EmployeeBuilder setEmployeeId(int employeeId) {
-	            this.employeeId = employeeId;
-	            return this;
+	    public static RandomFile getInstance() {
+	        if (ins == null) {
+	        	ins = new RandomFile();
 	        }
-
-	        public EmployeeBuilder setPps(String pps) {
-	            this.pps = pps;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setSurname(String surname) {
-	            this.surname = surname;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setFirstName(String firstName) {
-	            this.firstName = firstName;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setGender(char gender) {
-	            this.gender = gender;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setDepartment(String department) {
-	            this.department = department;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setSalary(double salary) {
-	            this.salary = salary;
-	            return this;
-	        }
-
-	        public EmployeeBuilder setFullTime(boolean fullTime) {
-	            this.fullTime = fullTime;
-	            return this;
-	        }
-
-	        public RandomAccessEmployeeRecord build() {
-	            return new RandomAccessEmployeeRecord(employeeId, pps, surname, firstName, gender, department, salary, fullTime);
-	        }
+	        return ins;
 	    }
-
 
 	// Create new file
 	public void createFile(String fileName) {

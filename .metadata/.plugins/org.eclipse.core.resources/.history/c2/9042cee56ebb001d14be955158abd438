@@ -18,6 +18,7 @@ class JTextFieldLimit extends PlainDocument {
 	    this.limit = limit;
 	  }// end JTextFieldLimit
   
+//removed the other constructor
   JTextFieldLimit(int limit, boolean upper) {
     super();
     this.limit = limit;

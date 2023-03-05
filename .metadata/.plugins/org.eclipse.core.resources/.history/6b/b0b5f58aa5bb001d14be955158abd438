@@ -9,15 +9,14 @@ import java.io.IOException;
 
 public class RandomAccessEmployeeRecord extends Employee
 {  
-    public static final int SIZE = 175; // Size of each RandomAccessEmployeeRecord object
+  //  public static final int SIZE = 175; // Size of each RandomAccessEmployeeRecord object
 
    // Create empty record
    public RandomAccessEmployeeRecord()
    {
       this(0, "","","",'\0', "", 0.0, false);
    } // end RandomAccessEmployeeRecord
-   
-   
+
    // Initialize record with details
    public RandomAccessEmployeeRecord( int employeeId, String pps, String surname, String firstName, char gender, 
 		   String department, double salary, boolean fullTime)

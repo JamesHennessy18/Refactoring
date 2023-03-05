@@ -47,6 +47,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import AddRecordDialog.Builder;
 import net.miginfocom.swing.MigLayout;
 
 public class EmployeeDetails extends JFrame implements ActionListener, ItemListener, DocumentListener, WindowListener {
@@ -1034,7 +1035,7 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 					displayEmployeeSummaryDialog();
 		} else if (e.getSource() == create || e.getSource() == add) {
 			if (checkInput() && !checkForChanges())
-				new AddRecordDialog(EmployeeDetails.this);
+				new AddRecordDialog(Builder.this);
 		} else if (e.getSource() == modify || e.getSource() == edit) {
 			if (checkInput() && !checkForChanges())
 				editDetails();

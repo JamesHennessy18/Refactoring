@@ -58,7 +58,7 @@ public class AddRecordDialog extends JDialog implements ActionListener {
         
         getRootPane().setDefaultButton(save);
         
-        setSize(builder.w, builder.h);
+        setSize(builder.width, builder.height);
         setLocation(builder.x, builder.y);
         setVisible(true);
     }
@@ -67,11 +67,11 @@ public class AddRecordDialog extends JDialog implements ActionListener {
 
         private String title = "Add Record";
         private EmployeeDetails parent;
-        private int w = 500;
-        private int h = 370;
+        private int width = 500;
+        private int height = 370;
         private int x = 350;
         private int y = 250;
-     
+        private Font font1;
 
         public Builder(EmployeeDetails parent) {
             this.parent = parent;
@@ -82,13 +82,13 @@ public class AddRecordDialog extends JDialog implements ActionListener {
             return this;
         }
 
-        public Builder setW(int w) {
-            this.w = w;
+        public Builder setWidth(int width) {
+            this.width = width;
             return this;
         }
 
-        public Builder setH(int h) {
-            this.h = h;
+        public Builder setHeight(int height) {
+            this.height = height;
             return this;
         }
 
@@ -99,6 +99,11 @@ public class AddRecordDialog extends JDialog implements ActionListener {
 
         public Builder setY(int y) {
             this.y = y;
+            return this;
+        }
+
+        public Builder setFont(Font font1) {
+            this.font1 = font1;
             return this;
         }
 

@@ -6,7 +6,6 @@
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -45,67 +44,6 @@ public class AddRecordDialog extends JDialog implements ActionListener {
 		setLocation(350, 250);
 		setVisible(true);
 	}// end AddRecordDialog
-	
-	private AddRecordDialog(Builder builder) {
-        setTitle(builder.title);
-        setModal(true);
-        parent = builder.parent;
-        parent.setEnabled(false);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
-        JScrollPane scrollPane = new JScrollPane(dialogPane());
-        setContentPane(scrollPane);
-        
-        getRootPane().setDefaultButton(save);
-        
-        setSize(builder.w, builder.h);
-        setLocation(builder.x, builder.y);
-        setVisible(true);
-    }
-
-    public static class Builder {
-
-        private String title = "Add Record";
-        private EmployeeDetails parent;
-        private int w = 500;
-        private int h = 370;
-        private int x = 350;
-        private int y = 250;
-     
-
-        public Builder(EmployeeDetails parent) {
-            this.parent = parent;
-        }
-
-        public Builder setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public Builder setW(int w) {
-            this.w = w;
-            return this;
-        }
-
-        public Builder setH(int h) {
-            this.h = h;
-            return this;
-        }
-
-        public Builder setX(int x) {
-            this.x = x;
-            return this;
-        }
-
-        public Builder setY(int y) {
-            this.y = y;
-            return this;
-        }
-
-        public AddRecordDialog build() {
-            return new AddRecordDialog(this);
-        }
-    }
 
 	// initialize dialog container
 	public Container dialogPane() {

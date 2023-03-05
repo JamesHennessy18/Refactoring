@@ -16,8 +16,7 @@ public class RandomAccessEmployeeRecord extends Employee
    {
       this(0, "","","",'\0', "", 0.0, false);
    } // end RandomAccessEmployeeRecord
-   
-   
+
    // Initialize record with details
    public RandomAccessEmployeeRecord( int employeeId, String pps, String surname, String firstName, char gender, 
 		   String department, double salary, boolean fullTime)

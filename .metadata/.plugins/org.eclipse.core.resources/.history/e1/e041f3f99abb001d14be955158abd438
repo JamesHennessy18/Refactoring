@@ -15,7 +15,7 @@ public class RandomFile {
 	private RandomAccessFile output;
 	private RandomAccessFile input;
 	private static RandomFile ins;
-	//Adding the Builder Pattern to this class
+	
 	 public static class EmployeeBuilder {
 	        private int employeeId;
 	        private String pps;
